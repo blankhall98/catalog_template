@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+
+{%block title%}add item!{%endblock%}
+
+{%block content%}
+    
+    <div class="add_item_form">
+        <form action="" method="post">
+            {{form.csrf_token }}
+            <p>Item Name</p>
+            {{form.name}}
+            <p>Item Category</p>
+            {{form.category}}
+            <p>Item Details</p>
+            {{form.details}}
+            <p>Item Cost</p>
+            {{form.price}}
+            <p>{{form.submit}}</p>
+        </form>
+    </div>
+
+{%endblock%}

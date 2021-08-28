@@ -1,0 +1,32 @@
+{%extends 'base.html'%}
+
+{%block title%}index!{%endblock%}
+
+{%block content%}
+
+    <div class="nav">
+        <p class="nav_option">Us</p>
+        <p class="nav_option">Catalog</p>
+        <p class="nav_option">Contact</p>
+    </div>
+
+    <div class="products_container">
+        {%for item in items %}
+        <div class="product_bubble">
+            <p class="font_product_title">{{item.name}}</p>
+            <div class="product_image"></div>
+            <p class="font_product_category">{{item.category}}</p>
+        </div>
+        {%endfor%}
+    </div>
+
+    <div class="owner">
+        <p><a href="{{ url_for('add_item') }}">Add new Item</a></p>
+        <p><a href="">Eliminate Item</a></p>
+        <p><a href="">Edit (Us)</a></p>
+        <p><a href="">Edit (Contact)</a></p>
+    </div>
+    
+    
+
+{%endblock%}
